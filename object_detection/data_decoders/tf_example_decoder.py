@@ -187,7 +187,7 @@ class TfExampleDecoder(data_decoder.DataDecoder):
 
     return tf.cast(tf.reshape(masks, to_shape), tf.bool)
 
-  def _reshape_edgemasks(selfself, keys_to_tensors):
+  def _reshape_edgemasks(self, keys_to_tensors): # selfself???
     edgemask_masks = keys_to_tensors['image/edgemask/masks']
     if isinstance(edgemask_masks, tf.SparseTensor):
       edgemask_masks = tf.sparse_tensor_to_dense(edgemask_masks)
