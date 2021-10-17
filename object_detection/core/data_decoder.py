@@ -18,10 +18,11 @@
 Data decoders decode the input data and return a dictionary of tensors keyed by
 the entries in core.reader.Fields.
 """
-from abc import ABCMeta
+from abc import ABCMeta    # abc为抽象基类模块
 from abc import abstractmethod
-
-
+# 抽象类用来描述一种类型应该具备的基本特征与功能，具体如何去完成这些行为由子类通过方法重写来完成。
+# 抽象方法指只有功能声明，没有功能主体实现的方法。具有抽象方法的类一定为抽象类。
+# 抽象类无法直接创建对象，只能被子类继承后，创建子类对象。
 class DataDecoder(object):
   """Interface for data decoders."""
   __metaclass__ = ABCMeta
