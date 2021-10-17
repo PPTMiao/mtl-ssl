@@ -26,8 +26,8 @@ from abc import abstractmethod
 class DataDecoder(object):
   """Interface for data decoders."""
   __metaclass__ = ABCMeta
-
   @abstractmethod
+  # 上两行命令让DataDecoer类变成抽象类，不能被实例化，且其子类必须实现decode方法，否则会报错。
   def decode(self, data):
     """Return a single image and associated labels.
 
